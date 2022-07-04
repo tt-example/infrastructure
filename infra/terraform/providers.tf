@@ -11,4 +11,7 @@ terraform {
 
 provider "aws" {
   region = var.aws_region
+  assume_role {
+    role_arn = "arn:aws:iam::548930680747:role/tt-role"
+  }
 }
