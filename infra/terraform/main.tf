@@ -11,7 +11,7 @@ locals {
 }
 
 resource "aws_vpc" "tt_vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/24"
 }
 
 resource "aws_internet_gateway" "tt_gw" {
