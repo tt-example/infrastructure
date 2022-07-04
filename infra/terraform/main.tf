@@ -24,7 +24,7 @@ resource "aws_internet_gateway" "tt_gw" {
 
 resource "aws_subnet" "tt_subnets" {
   count      = length(local.all_subnets)
-  vpc_id     = local.all_subnets[count.index].name
+  vpc_id     = aws_vpc.tt_vpc.id
   cidr_block = "10.0.${count.index + 1}.0/24"
 
   tags = {
